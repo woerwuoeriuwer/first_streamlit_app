@@ -8,11 +8,6 @@ streamlit.title('My Parents new Healthy Diner')
 
 streamlit.header('Breakfast Menu')
 
-#my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-#my_cur = my_cnx.cursor()
-#my_cur.execute("select * from fruit_load_list;")
-#my_data = my_cur.fetchall()
-#streamlit.dataframe(my_data)
 
 
 
@@ -35,6 +30,15 @@ streamlit.text(f'The user entered {fruit_choice}')
 fruityvice_response = pd.json_normalize(requests.get(f"https://fruityvice.com/api/fruit/{fruit_choice}").json())
 
 streamlit.dataframe(fruityvice_response)
+
+streamlit.stop()
+
+#my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+#my_cur = my_cnx.cursor()
+#my_cur.execute("select * from fruit_load_list;")
+#my_data = my_cur.fetchall()
+#streamlit.dataframe(my_data)
+
 
 add_fruit = streamlit.text_input("Which fruit would you like to add?", 'jackfruit')
 
