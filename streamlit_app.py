@@ -7,11 +7,11 @@ streamlit.title('My Parents new Healthy Diner')
 
 streamlit.header('Breakfast Menu')
 
-//my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-//my_cur = my_cnx.cursor()
-//my_cur.execute("select * from fruit_load_list;")
-//my_data = my_cur.fetchall()
-//streamlit.dataframe(my_data)
+#my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+#my_cur = my_cnx.cursor()
+#my_cur.execute("select * from fruit_load_list;")
+#my_data = my_cur.fetchall()
+#streamlit.dataframe(my_data)
 
 
 
