@@ -1,10 +1,14 @@
 import streamlit
 import pandas as pd
+import requests
 
 streamlit.title('My Parents new Healthy Diner')
 
 streamlit.header('Breakfast Menu')
-streamlit.text('Dies, Das, verschiedene Dinge')
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+
+streamlit.text(fruityvice_response)
 
 streamlit.header('Customize Your Own Smoothie')
 
