@@ -20,6 +20,9 @@ streamlit.dataframe(my_fruit_list.loc[fruits_selected])
 
 
 streamlit.header("Fruityvice Advice")
+
+streamlit.text_input('Which fruit interests you?', 'Kiwi')
+
 fruityvice_response = pd.json_normalize(requests.get("https://fruityvice.com/api/fruit/watermelon").json())
 
 streamlit.dataframe(fruityvice_response)
